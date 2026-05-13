@@ -1053,34 +1053,6 @@ Edit scripts/configs as needed on another machine.
 
 ---
 
-# GitHub / Dotfiles Usage
-
-This repo should include the exported dotfiles folder:
-
-```bash
-~/Dotfiles-Aetherelic
-```
-
-To update the repo after changing the rice:
-
-```bash
-bash ~/.config/hypr/scripts/export-dotfiles-github.sh
-
-cd ~/Dotfiles-Aetherelic
-git add .
-git commit -m "Update rice config"
-git push
-```
-
-Before pushing publicly, check for secrets:
-
-```bash
-grep -RInEi "token|password|secret|apikey|api_key|private key|BEGIN OPENSSH|github_pat" . 2>/dev/null
-find . -type f -size +20M -print
-```
-
----
-
 # Disclaimer
 
 This is a personal rice, not a universal Hyprland installer.
