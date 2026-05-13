@@ -1,0 +1,101 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+  "logo": {
+    "source": "~/.config/fastfetch/ascii.txt",
+    "type": "file",
+    "padding": {
+      "top": 1,
+      "left": 2,
+      "right": 4
+    },
+    "color": {
+      "1": "cyan",
+      "2": "green",
+      "3": "blue"
+    }
+  },
+
+  "display": {
+    "separator": "  →  ",
+    "key": {
+      "width": 13
+    }
+  },
+
+  "modules": [
+    {
+      "type": "custom",
+      "format": "\u001b[38;2;184;192;184mWelcome \u001b[38;2;143;164;122maetherelic\u001b[38;2;184;192;184m...\u001b[0m"
+    },
+    "break",
+
+    {
+      "type": "custom",
+      "format": "\u001b[38;2;191;164;149mSoftware\u001b[0m"
+    },
+    {
+      "type": "os",
+      "key": "▣ OS"
+    },
+    {
+      "type": "kernel",
+      "key": "├ Kernel"
+    },
+    {
+      "type": "wm",
+      "key": "├ WM"
+    },
+    {
+      "type": "de",
+      "key": "├ DE"
+    },
+    {
+      "type": "terminal",
+      "key": "└ Terminal"
+    },
+
+    "break",
+
+    {
+      "type": "custom",
+      "format": "\u001b[38;2;191;164;149mHardware\u001b[0m"
+    },
+    {
+      "type": "host",
+      "key": "▣ PC"
+    },
+    {
+      "type": "cpu",
+      "key": "├ CPU"
+    },
+    {
+      "type": "gpu",
+      "key": "├ GPU"
+    },
+    {
+      "type": "memory",
+      "key": "├ Memory"
+    },
+    {
+      "type": "disk",
+      "key": "├ Disk",
+      "folders": "/"
+    },
+    {
+      "type": "packages",
+      "key": "├ Packages"
+    },
+    {
+      "type": "uptime",
+      "key": "└ Uptime"
+    },
+
+    "break",
+
+    {
+      "type": "colors",
+      "symbol": "circle"
+    }
+  ]
+}

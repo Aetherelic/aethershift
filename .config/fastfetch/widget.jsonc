@@ -1,0 +1,13 @@
+{
+  "logo": {
+    "type": "none"
+  },
+  "modules": [
+    { "type": "os", "key": "OS" },
+    { "type": "kernel", "key": "KER" },
+    { "type": "packages", "key": "PKG" },
+    { "type": "uptime", "key": "UP" },
+    { "type": "memory", "key": "RAM" },
+    { "type": "disk", "folders": "/", "key": "SSD" }
+  ]
+}
