@@ -24,13 +24,11 @@ This version, **Aetherelic Hyprland Rice**, is my customized Arch Linux + Hyprla
 
 # Screenshots
 
-Add screenshots here later:
+<img width="2560" height="1440" alt="screenshot-area-2026-05-13_22-44-52" src="https://github.com/user-attachments/assets/412dd6e1-b740-4820-805f-3772f5243c95" />
 
-```markdown
-![Desktop](screenshots/desktop.png)
-![Menu](screenshots/menu.png)
-![Music Panel](screenshots/music-panel.png)
-```
+<img width="1213" height="898" alt="screenshot-area-2026-05-13_22-45-38" src="https://github.com/user-attachments/assets/57e7061a-b955-413d-9c15-d139ac472c9d" />
+
+<img width="913" height="391" alt="screenshot-area-2026-05-13_22-45-28" src="https://github.com/user-attachments/assets/4ee75899-b307-4e3b-9927-ed54bdf67570" />
 
 ---
 
