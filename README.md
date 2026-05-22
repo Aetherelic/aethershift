@@ -564,7 +564,7 @@ Clone into a temporary location:
 
 ```bash
 cd ~
-git clone https://github.com/YOUR_USERNAME/aetherelic-hyprland-rice.git
+git clone https://github.com/Aetherelic/adaptive-hyprland-rice.git
 cd aetherelic-hyprland-rice
 ```
 
