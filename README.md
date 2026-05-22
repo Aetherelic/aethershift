@@ -568,7 +568,6 @@ git clone https://github.com/Aetherelic/adaptive-hyprland-rice.git
 cd aetherelic-hyprland-rice
 ```
 
-Replace `YOUR_USERNAME` with your GitHub username.
 
 ---
 
