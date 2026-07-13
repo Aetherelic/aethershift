@@ -1,42 +1,126 @@
-# Adaptive Hyprland Rice
+<div align="center">
 
-A personal Arch Linux + Hyprland rice based on/forked from **Vroomies** by **maxchennn**.
+# ◈ AetherShift
 
-This started as a Vroomies-inspired setup and was expanded into a full daily-driver Hyprland environment with adaptive theming, Quickshell panels, glass menus, gaming tools, screenshots/recording, system utilities, backup tools, and workflow polish.
+### A wallpaper-driven Hyprland environment that changes with you.
+
+<br>
+
+[![Arch Linux](https://img.shields.io/badge/ARCH-LINUX-1793D1?style=for-the-badge&logo=archlinux&logoColor=white)](https://archlinux.org/)
+[![Hyprland](https://img.shields.io/badge/HYPRLAND-WAYLAND-58E1FF?style=for-the-badge&logo=wayland&logoColor=111827)](https://hypr.land/)
+[![Quickshell](https://img.shields.io/badge/QUICKSHELL-QML-7C3AED?style=for-the-badge&logo=qt&logoColor=white)](https://quickshell.org/)
+[![Matugen](https://img.shields.io/badge/MATUGEN-ADAPTIVE_THEMES-A78BFA?style=for-the-badge&logo=materialdesign&logoColor=white)](https://github.com/InioX/matugen)
+[![Status](https://img.shields.io/badge/STATUS-PERSONAL_BUILD-111827?style=for-the-badge)](#-before-installing)
+
+<br>
+
+**AetherShift** is my personal Arch Linux and Hyprland environment.
+
+It combines adaptive wallpaper-based colours, a custom Quickshell desktop shell, glass Rofi menus, media controls, gaming tools, system utilities and workflow automation into one cohesive daily-driver setup.
+
+<br>
+
+> Change the wallpaper.  
+> Shift the atmosphere.  
+> Keep the workflow.
+
+<br>
+
+[Preview](#-preview) •
+[Features](#-features) •
+[Components](#-components) •
+[Installation](#-installation) •
+[Keybinds](#-keybinds) •
+[Credits](#-credits)
+
+</div>
+
+<br>
 
 ---
 
-## Credits
+## ✦ Preview
 
-This rice is based on/forked from:
+<div align="center">
 
-- **Vroomies GitHub repo:**  
-  https://github.com/maxchennn/vroomies
+<img width="100%" alt="AetherShift Hyprland desktop" src="https://github.com/user-attachments/assets/412dd6e1-b740-4820-805f-3772f5243c95" />
 
-- **Original Reddit inspiration:**  
-  https://www.reddit.com/r/hyprland/comments/1t8myvg/blame_it_on_your_love_feat_vroomies/
+<br><br>
 
-Huge credit to **maxchennn** for the original visual direction, Quickshell setup, Vroomies components, and the music-player concept.
+<img width="49%" alt="AetherShift glass action menu" src="https://github.com/user-attachments/assets/57e7061a-b955-413d-9c15-d139ac472c9d" />
+<img width="49%" alt="AetherShift music panel" src="https://github.com/user-attachments/assets/4ee75899-b307-4e3b-9927-ed54bdf67570" />
 
-This version, **Aetherelic Hyprland Rice**, is my customized Arch Linux + Hyprland fork with extra scripts, menus, system tools, and personal workflow additions.
+</div>
 
----
-
-# Screenshots
-
-<img width="2560" height="1440" alt="screenshot-area-2026-05-13_22-44-52" src="https://github.com/user-attachments/assets/412dd6e1-b740-4820-805f-3772f5243c95" />
-
-<img width="1213" height="898" alt="screenshot-area-2026-05-13_22-45-38" src="https://github.com/user-attachments/assets/57e7061a-b955-413d-9c15-d139ac472c9d" />
-
-<img width="913" height="391" alt="screenshot-area-2026-05-13_22-45-28" src="https://github.com/user-attachments/assets/4ee75899-b307-4e3b-9927-ed54bdf67570" />
+<br>
 
 ---
 
-# What This Rice Adds
+## ✦ What Is AetherShift?
 
-This fork keeps the Vroomies/Quickshell aesthetic but adds a lot of extra daily-driver functionality.
+AetherShift began as a personal fork inspired by
+[Vroomies](https://github.com/maxchennn/vroomies) by
+[maxchennn](https://github.com/maxchennn).
 
-## Adaptive Theme System
+It has since grown into a larger daily-driver environment with its own:
+
+- Wallpaper-driven theme system
+- Custom scripts and utilities
+- Glass application menus
+- Gaming and performance controls
+- Screenshot and recording workflow
+- Snapshot and restoration tools
+- Maintenance and repair systems
+- Productivity helpers
+- Audio-device shortcuts
+- Personal workflow integrations
+
+This repository contains the configuration files behind that environment.
+
+It is designed primarily for my own system, but it can also be used as a reference, starting point or source of individual components for another Hyprland setup.
+
+<br>
+
+---
+
+## ✦ Design Philosophy
+
+AetherShift is built around three ideas.
+
+### Adaptive
+
+The visual identity should come from the wallpaper rather than from one permanently hardcoded palette.
+
+### Functional
+
+Every menu, panel and animation should serve a real purpose instead of existing only for screenshots.
+
+### Recoverable
+
+Experimenting with a rice should not mean losing a working configuration. Repair scripts, backups and snapshots are treated as part of the desktop itself.
+
+<br>
+
+---
+
+## ✦ Theme Pipeline
+
+```text
+┌─────────────────┐
+│    Wallpaper    │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│     Matugen     │
+│ Colour analysis │
+└────────┬────────┘
+         │
+         ├──────────────┬──────────────┬──────────────┐
+         ▼              ▼              ▼              ▼
+   Quickshell          Rofi           Kitty        Hyprland
+   panels and UI    glass menus    terminal theme   borders
+```
 
 Wallpapers are stored in:
 
@@ -44,427 +128,217 @@ Wallpapers are stored in:
 ~/Pictures/visions
 ```
 
-When a wallpaper is selected, the rice regenerates colours for:
+Selecting a wallpaper can regenerate colours for:
 
 - Quickshell
 - Rofi
 - Kitty
-- Hyprland borders/glow
-- Wallpaper picker
-- Random theme switcher
+- Hyprland borders and effects
+- Wallpaper menus
+- Supporting scripts and widgets
 
 Main theme controls:
 
 ```text
-SUPER + Shift + A  Wallpaper/theme picker
-SUPER + Ctrl + A   Random adaptive theme
+SUPER + Shift + A    Open wallpaper and theme picker
+SUPER + Ctrl + A     Apply a random adaptive theme
 ```
 
-There is also an optional boot shuffle script that can randomly apply a wallpaper/theme when Hyprland starts.
+An optional boot-shuffle script can also apply a random wallpaper and colour scheme when Hyprland starts.
+
+<br>
 
 ---
 
-## Quickshell Desktop Shell
+## ✦ Features
 
-The rice uses Quickshell for the main desktop shell.
+### Adaptive desktop
 
-Includes:
+- Wallpaper-derived colour palettes
+- Coordinated colours across desktop components
+- Animated wallpaper transitions
+- Random theme switching
+- Generated glass-menu styling
 
-- Vertical side bar
+### Quickshell environment
+
+- Vertical workspace bar
 - Workspace indicators
-- Adaptive colours
-- Music integration through MPRIS
-- Wallpaper picker integration
-- Small music panel
-- Vroomies-style visual language
+- Adaptive foreground and accent colours
+- MPRIS media integration
+- Wallpaper-picker integration
+- Compact music panel
+- Desktop information widgets
 
-Main Quickshell folder:
+### Glass menus
 
-```bash
-~/.config/quickshell
-```
+- Central category-based action menu
+- Adaptive borders and highlights
+- Application launcher
+- Theme and wallpaper controls
+- System-management actions
+- Audio and media shortcuts
+- Screenshot and recording tools
+- Gaming controls
+- Maintenance and backup actions
+- Power controls
 
----
+### Gaming workflow
 
-## Glass Rofi Menus
-
-The old flat action menu was rebuilt into a cleaner category-based launcher.
-
-Main menu:
-
-```text
-SUPER + F1
-```
-
-Categories include:
-
-- Apps
-- Rice / Theme
-- System
-- Audio / Media
-- Screenshots / Recording
-- Gaming
-- Notes / Info
-- Maintenance / Backup
-- Power
-
-The menu uses an adaptive glass Rofi theme generated from the current wallpaper colours.
-
----
-
-## Gaming Tools
-
-Added gaming-focused tools:
-
-- Gaming mode
-- Gaming workspace/profile
+- One-key gaming mode
+- Dedicated gaming profile
+- Reduced visual effects while gaming
 - MangoHud support
 - GameMode support
+- Performance-oriented workspace controls
 - CS2 troubleshooting profile
-- One-key visual/performance toggle
 
-Gaming mode:
+### Desktop utilities
 
-```text
-SUPER + F12
-```
+- Screenshot editor workflow
+- Screen recording
+- Drop-down terminal
+- Floating system monitor
+- Information centre
+- Welcome and system-status popup
+- Notes and todo menu
+- Focus timer
+- Caffeine mode
+- Display blanking
+- Power menu
 
-Gaming profile:
+### Recovery and maintenance
 
-```text
-SUPER + G          Enter gaming profile
-SUPER + Shift + G  Leave gaming profile
-```
+- Rice repair script
+- Snapshot and restore menu
+- Configuration backups
+- Package update shortcuts
+- Pacman cache maintenance
+- Orphan-package checks
+- Journal cleanup
+- Rice health checks
+- GitHub dotfiles export
 
-Gaming mode turns off heavy visuals like blur/transparency/animations and tries to set the CPU governor to performance.
-
----
-
-## Screenshot and Recording Workflow
-
-Screenshots use:
-
-- `grim`
-- `slurp`
-- `swappy`
-- `wl-copy`
-
-Keybinds:
-
-```text
-Print          Area screenshot with editor
-SUPER + Print  Full screenshot with editor
-```
-
-Screenshots save to:
-
-```bash
-~/Pictures/Screenshots
-```
-
-Recording uses `wf-recorder` and is available through:
-
-```text
-SUPER + F1 → Screenshots / Recording
-```
-
-Recordings save to:
-
-```bash
-~/Videos/Recordings
-```
+<br>
 
 ---
 
-## Vesktop Screenshare Setup
+## ✦ Components
 
-Official Discord was unreliable for screensharing on this Wayland/Hyprland setup.
+| Component | Role |
+|:--|:--|
+| **Hyprland** | Wayland compositor and window management |
+| **Quickshell** | Main desktop shell, panels and widgets |
+| **Matugen** | Wallpaper-based colour generation |
+| **Rofi** | Glass application and action menus |
+| **Kitty** | Terminal emulator |
+| **SwayNC** | Notifications and notification centre |
+| **awww** | Wallpaper daemon and transitions |
+| **PipeWire** | Audio routing |
+| **Playerctl** | MPRIS media control |
+| **Cava** | Audio visualisation |
+| **MangoHud** | Gaming performance overlay |
+| **GameMode** | Gaming performance integration |
+| **Grim** | Wayland screenshots |
+| **Slurp** | Region selection |
+| **Swappy** | Screenshot editing |
+| **wf-recorder** | Screen recording |
+| **btop** | System monitoring |
+| **Fastfetch** | System information |
 
-This rice uses **Vesktop** as the recommended Discord client.
+<br>
 
-Menu path:
+---
+
+## ✦ Repository Layout
 
 ```text
-SUPER + F1 → Apps → Vesktop / Discord
+aethershift-hyprland/
+├── .config/
+│   ├── MangoHud/       # Gaming overlay configuration
+│   ├── cava/           # Audio visualiser
+│   ├── fastfetch/      # System-information layout
+│   ├── hypr/           # Hyprland configuration and scripts
+│   ├── kitty/          # Terminal configuration
+│   ├── matugen/        # Adaptive colour templates
+│   ├── quickshell/     # Desktop shell and QML components
+│   ├── rofi/           # Launchers and glass menus
+│   └── swaync/         # Notification styling
+├── .gitignore
+├── README.md
+└── SYSTEM-INFO.txt
 ```
 
-Vesktop is installed through Flatpak:
-
-```bash
-flatpak install flathub dev.vencord.Vesktop
-```
+<br>
 
 ---
 
-## Audio Helpers
+## ✦ Before Installing
 
-Added quick scripts for preferred audio defaults:
+> [!IMPORTANT]
+> AetherShift is a personal configuration repository, not a universal Hyprland installer.
 
-- Output: Astro A50 Game
-- Input: Fifine Microphone
-
-Available from:
-
-```text
-SUPER + F1 → Audio / Media
-```
-
-Scripts:
-
-```bash
-~/.config/hypr/scripts/audio-game-output.sh
-~/.config/hypr/scripts/audio-fifine-input.sh
-```
-
-You will probably need to edit these if your audio device names are different.
-
----
-
-## Rice Repair System
-
-A one-key repair script refreshes the main rice components if something breaks.
-
-Keybind:
-
-```text
-SUPER + Shift + R
-```
-
-It refreshes:
-
-- Quickshell
-- Wallpaper daemon
-- SwayNC
-- Adaptive themes
-- Audio defaults
-- Hyprland reload
-
-Script:
-
-```bash
-~/.config/hypr/scripts/repair-rice.sh
-```
-
----
-
-## Snapshot and Restore System
-
-This rice includes a full snapshot/restore menu.
-
-Keybind:
-
-```text
-SUPER + Shift + B
-```
-
-Snapshots are saved to:
-
-```bash
-~/Aetherelic-Rice-Snapshots
-```
-
-This makes it safer to experiment because you can restore a previous working rice.
-
----
-
-## Maintenance Menu
-
-A maintenance menu was added for system upkeep.
-
-Keybind:
-
-```text
-SUPER + Shift + M
-```
-
-Includes:
-
-- Check updates
-- Update system
-- Clean pacman cache
-- List orphan packages
-- Remove orphan packages
-- Clean journal logs
-- Rice health check
-
----
-
-## Info Center
-
-The rice includes a small info center.
-
-Keybind:
-
-```text
-SUPER + I
-```
-
-Includes:
-
-- Calendar
-- Weather
-- Now playing
-- Network
-- Storage
-- System summary
-
----
-
-## Welcome Popup
-
-A compact session popup shows useful system/rice info.
-
-Keybind:
-
-```text
-SUPER + W
-```
-
-It shows:
-
-- User
-- Kernel
-- Uptime
-- Monitor mode
-- GPU
-- NVIDIA driver
-- Current wallpaper
-- Quickshell/SwayNC/wallpaper daemon status
-
----
-
-## Drop-down Terminal and System Monitor
-
-Added glass terminal popups:
-
-```text
-SUPER + key above Tab          Drop-down terminal
-SUPER + Shift + key above Tab  Floating btop system monitor
-```
-
-Scripts:
-
-```bash
-~/.config/hypr/scripts/dropdown-terminal.sh
-~/.config/hypr/scripts/dropdown-btop.sh
-```
-
----
-
-## Notes, Todo, and Focus Timer
-
-Simple productivity tools were added.
-
-```text
-SUPER + K          Notes/todo menu
-SUPER + Shift + K  Focus timer
-```
-
-Files are stored in:
-
-```bash
-~/Documents/Aetherelic
-```
-
----
-
-## Safe Idle and Caffeine
-
-Hyprlock is currently disabled because it caused unlock issues on this system.
-
-Instead, the rice uses safe idle display blanking.
-
-```text
-SUPER + Shift + C  Toggle caffeine
-SUPER + Ctrl + Z   Turn screens off
-```
-
-This avoids locking the session while still allowing the display to sleep.
-
----
-
-## Dotfiles Export
-
-The repo itself was generated using the dotfiles export script.
-
-Keybind:
-
-```text
-SUPER + Ctrl + D
-```
-
-Script:
-
-```bash
-~/.config/hypr/scripts/export-dotfiles-github.sh
-```
-
-It exports the rice into:
-
-```bash
-~/Dotfiles-Aetherelic
-```
-
----
-
-# Keybind Summary
-
-| Keybind | Action |
-|---|---|
-| `SUPER + F1` | Main action menu |
-| `SUPER + Enter` | Terminal |
-| `SUPER + Shift + Enter` | File manager |
-| `SUPER + Q` | Close active window |
-| `SUPER + F` | Fullscreen active window |
-| `SUPER + Shift + F` | Firefox |
-| `SUPER + Shift + A` | Wallpaper/theme picker |
-| `SUPER + Ctrl + A` | Random adaptive theme |
-| `SUPER + F12` | Toggle gaming mode |
-| `SUPER + G` | Gaming profile |
-| `SUPER + Shift + G` | Leave gaming profile |
-| `Print` | Area screenshot |
-| `SUPER + Print` | Full screenshot |
-| `SUPER + I` | Info Center |
-| `SUPER + W` | Welcome popup |
-| `SUPER + Shift + M` | Maintenance menu |
-| `SUPER + Shift + B` | Rice snapshot/restore |
-| `SUPER + Shift + R` | Repair/refresh rice |
-| `SUPER + K` | Notes/todo |
-| `SUPER + Shift + K` | Focus timer |
-| `SUPER + Shift + C` | Caffeine toggle |
-| `SUPER + Ctrl + Z` | Turn screens off |
-| `SUPER + Shift + L` | Power menu |
-| `SUPER + Ctrl + B` | Export keybind cheat sheet |
-| `SUPER + Ctrl + D` | Export GitHub dotfiles |
-
-A full keybind cheat sheet can be exported to:
-
-```bash
-~/Documents/Aetherelic/AETHERELIC-KEYBINDS.md
-```
-
----
-
-# Installation Guide
-
-This repo is a personal rice backup, not a universal installer.
-
-These instructions assume:
+The configuration contains assumptions based on my own setup, including:
 
 - Arch Linux
 - Hyprland
-- systemd-boot or another working bootloader
-- PipeWire audio
+- PipeWire
 - NetworkManager
-- A normal user account
+- NVIDIA graphics
+- Specific monitor names
+- Specific audio-device names
+- Personal directory paths
+- My preferred applications and keybinds
 
-You should read through the steps before running them.
+You should read the configuration and installation steps before copying anything.
+
+At minimum, expect to adjust:
+
+- Monitor names
+- Monitor resolutions and refresh rates
+- Audio-device names
+- Wallpaper paths
+- GPU-related settings
+- Keyboard layout
+- Default applications
+- User-specific paths
+- Quickshell monitor targeting
+
+<br>
 
 ---
 
-## 1. Install Base Packages
+## ✦ Requirements
 
-Install the main packages:
+### Base system
+
+- Arch Linux or an Arch-based distribution
+- A working Hyprland installation
+- NetworkManager
+- PipeWire and WirePlumber
+- A regular non-root user
+- An AUR helper such as `yay`
+
+### Fonts
+
+AetherShift expects a Nerd Font, particularly JetBrains Mono Nerd Font.
+
+```bash
+sudo pacman -S --needed \
+  ttf-jetbrains-mono-nerd \
+  noto-fonts \
+  noto-fonts-emoji
+```
+
+Broken or missing icons usually indicate that the expected font is not installed.
+
+<br>
+
+---
+
+## ✦ Installation
+
+### 1. Install the main packages
 
 ```bash
 sudo pacman -S --needed \
@@ -475,6 +349,7 @@ sudo pacman -S --needed \
   pipewire \
   pipewire-pulse \
   wireplumber \
+  networkmanager \
   kitty \
   dolphin \
   firefox \
@@ -502,7 +377,6 @@ sudo pacman -S --needed \
   vulkan-tools \
   steam \
   git \
-  github-cli \
   rsync \
   imagemagick \
   curl \
@@ -510,384 +384,334 @@ sudo pacman -S --needed \
   pacman-contrib
 ```
 
-Some packages may not exist on every system depending on enabled repositories.
+Some packages may vary depending on your enabled repositories.
 
----
+### 2. Install the adaptive-shell packages
 
-## 2. Install AUR Helper
-
-If you do not already have `yay`:
+Using `yay`:
 
 ```bash
-cd /tmp
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
+yay -S --needed \
+  quickshell-git \
+  matugen-bin \
+  awww-git
 ```
 
----
+AUR package names can change over time. Search the AUR when one of the listed packages is unavailable.
 
-## 3. Install AUR Packages
-
-Some tools may be from the AUR depending on your setup.
-
-Examples:
-
-```bash
-yay -S --needed matugen-bin quickshell
-```
-
-Package names can change. If one fails, search:
-
-```bash
-yay -Ss matugen
-yay -Ss quickshell
-```
-
----
-
-## 4. Install Fonts
-
-This rice expects Nerd Fonts, especially JetBrains Mono Nerd Font.
-
-```bash
-sudo pacman -S --needed ttf-jetbrains-mono-nerd noto-fonts noto-fonts-emoji
-```
-
-If icons look broken, the font is probably missing.
-
----
-
-## 5. Clone This Repo
-
-Clone into a temporary location:
+### 3. Clone AetherShift
 
 ```bash
 cd ~
-git clone https://github.com/Aetherelic/adaptive-hyprland-rice.git
-cd aetherelic-hyprland-rice
+git clone https://github.com/Aetherelic/aethershift-hyprland.git
+cd aethershift-hyprland
 ```
 
-
----
-
-## 6. Back Up Existing Configs
-
-Before copying anything, back up your current configs:
+### 4. Back up existing configurations
 
 ```bash
-mkdir -p ~/arch-working-backup/pre-aetherelic-install-$(date +%Y-%m-%d_%H-%M)
+BACKUP_DIR="$HOME/.config-backups/aethershift-$(date +%Y%m%d-%H%M%S)"
 
-BACKUP_DIR=~/arch-working-backup/pre-aetherelic-install-$(date +%Y-%m-%d_%H-%M)
+mkdir -p "$BACKUP_DIR"
 
-cp -a ~/.config/hypr "$BACKUP_DIR/hypr" 2>/dev/null || true
-cp -a ~/.config/quickshell "$BACKUP_DIR/quickshell" 2>/dev/null || true
-cp -a ~/.config/rofi "$BACKUP_DIR/rofi" 2>/dev/null || true
-cp -a ~/.config/kitty "$BACKUP_DIR/kitty" 2>/dev/null || true
-cp -a ~/.config/matugen "$BACKUP_DIR/matugen" 2>/dev/null || true
-cp -a ~/.config/swaync "$BACKUP_DIR/swaync" 2>/dev/null || true
+for directory in \
+  hypr \
+  quickshell \
+  rofi \
+  kitty \
+  matugen \
+  swaync \
+  fastfetch \
+  MangoHud \
+  cava
+do
+  if [ -e "$HOME/.config/$directory" ]; then
+    cp -a "$HOME/.config/$directory" "$BACKUP_DIR/"
+  fi
+done
 ```
 
----
+The backup will be stored under:
 
-## 7. Copy Configs
+```bash
+~/.config-backups/
+```
 
-Copy the rice configs:
+### 5. Copy the configuration
 
 ```bash
 mkdir -p ~/.config
-
-cp -a .config/hypr ~/.config/
-cp -a .config/quickshell ~/.config/
-cp -a .config/rofi ~/.config/
-cp -a .config/kitty ~/.config/
-cp -a .config/matugen ~/.config/ 2>/dev/null || true
-cp -a .config/swaync ~/.config/ 2>/dev/null || true
-cp -a .config/fastfetch ~/.config/ 2>/dev/null || true
-cp -a .config/MangoHud ~/.config/ 2>/dev/null || true
-cp -a .config/cava ~/.config/ 2>/dev/null || true
+rsync -a .config/ ~/.config/
 ```
 
-Make scripts executable:
+Make the included scripts executable:
 
 ```bash
-chmod +x ~/.config/hypr/scripts/*.sh 2>/dev/null || true
-chmod +x ~/.config/hypr/scripts/*.py 2>/dev/null || true
-chmod +x ~/.config/quickshell/components/wall/wall.sh 2>/dev/null || true
+find ~/.config/hypr/scripts \
+  -type f \
+  \( -name '*.sh' -o -name '*.py' \) \
+  -exec chmod +x {} +
+
+chmod +x \
+  ~/.config/quickshell/components/wall/wall.sh \
+  2>/dev/null || true
 ```
 
----
-
-## 8. Create Wallpaper Folder
-
-Create the wallpaper folder:
+### 6. Create the required folders
 
 ```bash
-mkdir -p ~/Pictures/visions
-mkdir -p ~/Pictures/Screenshots
-mkdir -p ~/Videos/Recordings
-mkdir -p ~/Documents/Aetherelic
+mkdir -p \
+  ~/Pictures/visions \
+  ~/Pictures/Screenshots \
+  ~/Videos/Recordings \
+  ~/Documents/Aetherelic
 ```
 
-Add wallpapers to:
+Place your wallpapers inside:
 
 ```bash
 ~/Pictures/visions
 ```
 
-Recommended resolution:
+High-resolution wallpapers are strongly recommended because they become the visual foundation of the whole desktop.
 
-```text
-2560x1440 minimum
-3840x2160 ideal
-```
+### 7. Select an initial wallpaper
 
-Low-resolution wallpapers will look blurry on a 1440p monitor.
-
----
-
-## 9. Set Current Wallpaper Symlink
-
-Pick one wallpaper and link it:
+Replace `YOUR_WALLPAPER.png` with an existing file:
 
 ```bash
-ln -sf ~/Pictures/visions/YOUR_WALLPAPER.png ~/.config/hypr/current_wallpaper
+ln -sf \
+  "$HOME/Pictures/visions/YOUR_WALLPAPER.png" \
+  "$HOME/.config/hypr/current_wallpaper"
 ```
 
-Replace `YOUR_WALLPAPER.png` with your actual wallpaper.
-
-If using `.jpg` or `.webp`, adjust the file name.
-
----
-
-## 10. Generate Themes
-
-Run the theme generators if they exist:
+### 8. Generate the initial themes
 
 ```bash
-~/.config/hypr/scripts/generate-rofi-glass-theme.py 2>/dev/null || true
-~/.config/hypr/scripts/generate-rofi-theme.py 2>/dev/null || true
-~/.config/hypr/scripts/generate-hypr-theme.py 2>/dev/null || true
-~/.config/hypr/scripts/generate-kitty-theme.py 2>/dev/null || true
+~/.config/hypr/scripts/generate-rofi-glass-theme.py \
+  2>/dev/null || true
+
+~/.config/hypr/scripts/generate-rofi-theme.py \
+  2>/dev/null || true
+
+~/.config/hypr/scripts/generate-hypr-theme.py \
+  2>/dev/null || true
+
+~/.config/hypr/scripts/generate-kitty-theme.py \
+  2>/dev/null || true
 ```
 
-If `matugen` is installed, also run the wallpaper script once:
+Apply the selected wallpaper through the Quickshell wallpaper script:
 
 ```bash
-bash ~/.config/quickshell/components/wall/wall.sh ~/.config/hypr/current_wallpaper
+bash \
+  ~/.config/quickshell/components/wall/wall.sh \
+  ~/.config/hypr/current_wallpaper
 ```
 
----
+### 9. Enable supporting services
 
-## 11. Enable Services
-
-Enable Bluetooth if needed:
+Enable Bluetooth when required:
 
 ```bash
 sudo systemctl enable --now bluetooth.service
 ```
 
-Make sure PipeWire is running:
+Start the user audio services:
 
 ```bash
-systemctl --user enable --now pipewire pipewire-pulse wireplumber
+systemctl --user enable --now \
+  pipewire \
+  pipewire-pulse \
+  wireplumber
 ```
 
-Restart portals:
+Restart the desktop portals:
 
 ```bash
-systemctl --user restart xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
+systemctl --user restart \
+  xdg-desktop-portal \
+  xdg-desktop-portal-hyprland \
+  xdg-desktop-portal-gtk
 ```
+
+### 10. Check the configuration
+
+```bash
+hyprctl reload
+hyprctl configerrors
+```
+
+No output from `hyprctl configerrors` means Hyprland did not detect a configuration error.
+
+<br>
 
 ---
 
-## 12. Install Vesktop
+## ✦ Personalisation
 
-For Discord/screenshare:
+### Monitor configuration
 
-```bash
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install -y flathub dev.vencord.Vesktop
-flatpak override --user --filesystem=home dev.vencord.Vesktop
-```
-
-Launch with:
-
-```bash
-flatpak run dev.vencord.Vesktop
-```
-
----
-
-## 13. Edit Monitor Settings
-
-You must check your monitor names.
-
-Run:
+Find your monitor names:
 
 ```bash
 hyprctl monitors
 ```
 
-Then edit:
+Then inspect the Hyprland configuration:
 
 ```bash
 nano ~/.config/hypr/hyprland.conf
 ```
 
-Or any monitor-specific included config.
-
-This rice was built around a setup using a main monitor named something like:
+The original setup may contain references to a monitor such as:
 
 ```text
 DP-2
 ```
 
-Your monitor name may be different.
+Your outputs may instead be named something like:
 
-If Quickshell appears on the wrong monitor, check files like:
+```text
+DP-1
+HDMI-A-1
+eDP-1
+```
 
-```bash
+Also inspect Quickshell files that may contain monitor targeting:
+
+```text
 ~/.config/quickshell/components/Bar/bar.qml
 ~/.config/quickshell/components/MusicPanel.qml
 ```
 
-and replace hardcoded monitor names if needed.
+### Audio devices
 
----
-
-## 14. Edit Audio Device Scripts
-
-This rice includes personal audio scripts for:
+The included helper scripts were designed around:
 
 ```text
-Astro A50 Game
-Fifine Microphone
+Output: Astro A50 Game
+Input:  Fifine Microphone
 ```
 
-If you use different devices, edit:
-
-```bash
-nano ~/.config/hypr/scripts/audio-game-output.sh
-nano ~/.config/hypr/scripts/audio-fifine-input.sh
-```
-
-Find your device names with:
+Find your own device names with:
 
 ```bash
 wpctl status
 ```
 
----
+Then edit:
 
-## 15. Start Hyprland
-
-From TTY:
-
-```bash
-Hyprland
+```text
+~/.config/hypr/scripts/audio-game-output.sh
+~/.config/hypr/scripts/audio-fifine-input.sh
 ```
 
-Once inside Hyprland, reload config:
+### Default applications
 
-```bash
-hyprctl reload
-```
+Review the Hyprland configuration and action-menu scripts for references to applications such as:
 
-Check errors:
+- Kitty
+- Dolphin
+- Firefox
+- Vesktop
+- Steam
+- btop
 
-```bash
-hyprctl configerrors
-```
+Replace them with your preferred applications where necessary.
 
-If nothing prints, the config is clean.
-
----
-
-# Optional: Auto-start Hyprland After Login
-
-To auto-start Hyprland from TTY1 after login, add this to:
-
-```bash
-~/.bash_profile
-```
-
-```bash
-# Auto-start Hyprland on TTY1
-if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" = "1" ] && [ -z "$SSH_CONNECTION" ]; then
-  exec Hyprland
-fi
-```
+<br>
 
 ---
 
-# Optional: Auto-login to Hyprland
+## ✦ Keybinds
 
-This is less secure because it logs in without typing your password.
+| Keybind | Action |
+|:--|:--|
+| `SUPER + F1` | Open the main action menu |
+| `SUPER + Enter` | Open terminal |
+| `SUPER + Shift + Enter` | Open file manager |
+| `SUPER + Q` | Close active window |
+| `SUPER + F` | Toggle fullscreen |
+| `SUPER + Shift + F` | Open Firefox |
+| `SUPER + Shift + A` | Open wallpaper and theme picker |
+| `SUPER + Ctrl + A` | Apply a random adaptive theme |
+| `SUPER + F12` | Toggle gaming mode |
+| `SUPER + G` | Enter gaming profile |
+| `SUPER + Shift + G` | Leave gaming profile |
+| `Print` | Capture an area and open the editor |
+| `SUPER + Print` | Capture the full screen |
+| `SUPER + I` | Open information centre |
+| `SUPER + W` | Open welcome and system-status popup |
+| `SUPER + Shift + M` | Open maintenance menu |
+| `SUPER + Shift + B` | Open snapshot and restore menu |
+| `SUPER + Shift + R` | Repair and refresh the rice |
+| `SUPER + K` | Open notes and todo menu |
+| `SUPER + Shift + K` | Open focus timer |
+| `SUPER + Shift + C` | Toggle caffeine mode |
+| `SUPER + Ctrl + Z` | Turn displays off |
+| `SUPER + Shift + L` | Open power menu |
+| `SUPER + Ctrl + B` | Export keybind cheat sheet |
+| `SUPER + Ctrl + D` | Export GitHub dotfiles |
 
-Create:
+A full keybind reference can be exported to:
 
 ```bash
-sudo mkdir -p /etc/systemd/system/getty@tty1.service.d
+~/Documents/Aetherelic/AETHERELIC-KEYBINDS.md
 ```
 
-Then:
-
-```bash
-sudo tee /etc/systemd/system/getty@tty1.service.d/autologin.conf >/dev/null <<'EOF'
-[Service]
-ExecStart=
-ExecStart=-/usr/bin/agetty --autologin YOUR_USERNAME --noclear %I $TERM
-EOF
-```
-
-Replace `YOUR_USERNAME` with your username.
-
-Reload systemd:
-
-```bash
-sudo systemctl daemon-reload
-```
-
-To undo:
-
-```bash
-sudo rm -f /etc/systemd/system/getty@tty1.service.d/autologin.conf
-sudo systemctl daemon-reload
-```
+<br>
 
 ---
 
-# Optional: NVIDIA Notes
+## ✦ Main Action Menu
 
-This setup was used with an NVIDIA GPU on Wayland.
+Open the action menu with:
 
-Useful packages:
-
-```bash
-sudo pacman -S --needed nvidia-open nvidia-utils lib32-nvidia-utils
+```text
+SUPER + F1
 ```
 
-For multiple kernels, DKMS may be easier:
+The menu is divided into functional categories:
 
-```bash
-sudo pacman -S --needed nvidia-open-dkms
+```text
+Apps
+Rice / Theme
+System
+Audio / Media
+Screenshots / Recording
+Gaming
+Notes / Info
+Maintenance / Backup
+Power
 ```
 
-Check NVIDIA:
+Its colours, borders and highlights are generated from the current wallpaper.
 
-```bash
-nvidia-smi
-```
+<br>
 
 ---
 
-# Optional: Steam/GameMode/MangoHud
+## ✦ Gaming Mode
 
-Install:
+Toggle gaming mode with:
 
-```bash
-sudo pacman -S --needed steam gamemode mangohud
+```text
+SUPER + F12
+```
+
+Gaming mode attempts to reduce desktop overhead by disabling or reducing effects such as:
+
+- Blur
+- Transparency
+- Animations
+- Non-essential visual processes
+
+The dedicated gaming profile can be controlled with:
+
+```text
+SUPER + G            Enter gaming profile
+SUPER + Shift + G    Leave gaming profile
 ```
 
 Basic Steam launch option:
@@ -896,190 +720,350 @@ Basic Steam launch option:
 gamemoderun %command%
 ```
 
-For FPS testing:
+With MangoHud:
 
 ```text
 mangohud gamemoderun %command%
 ```
 
-For games that crash with Vulkan overlays, test without MangoHud first.
+Test without MangoHud when a game has problems with Vulkan overlays.
+
+<br>
 
 ---
 
-# Troubleshooting
+## ✦ Screenshots and Recording
 
-## Hyprland Config Errors
+### Area screenshot
 
-Run:
-
-```bash
-hyprctl configerrors
+```text
+Print
 ```
 
-If errors appear, inspect the mentioned file and line.
+### Full screenshot
+
+```text
+SUPER + Print
+```
+
+The workflow uses:
+
+```text
+grim → slurp → swappy → wl-copy
+```
+
+Screenshots are stored in:
+
+```bash
+~/Pictures/Screenshots
+```
+
+Screen recording uses `wf-recorder` and can be accessed through:
+
+```text
+SUPER + F1
+└── Screenshots / Recording
+```
+
+Recordings are stored in:
+
+```bash
+~/Videos/Recordings
+```
+
+<br>
 
 ---
 
-## Quickshell Not Starting
+## ✦ Repair System
 
-Run:
+AetherShift includes a repair script for refreshing the main desktop components.
 
-```bash
-pkill quickshell
-QML_XHR_ALLOW_FILE_READ=1 quickshell --path ~/.config/quickshell/shell.qml
-```
-
-Check logs:
-
-```bash
-tail -80 /tmp/quickshell.log
-```
-
----
-
-## Wallpaper Not Applying
-
-Restart the wallpaper daemon:
-
-```bash
-pkill awww-daemon
-awww-daemon &
-```
-
-Reapply wallpaper:
-
-```bash
-awww img ~/.config/hypr/current_wallpaper --transition-type fade --transition-duration 1.2 --resize crop
-```
-
----
-
-## Audio Wrong Device
-
-Check devices:
-
-```bash
-wpctl status
-```
-
-Then either edit the audio scripts or set manually:
-
-```bash
-wpctl set-default DEVICE_ID
-```
-
----
-
-## Rofi Menus Look Broken
-
-Regenerate Rofi theme:
-
-```bash
-~/.config/hypr/scripts/generate-rofi-glass-theme.py
-```
-
----
-
-## Kitty Theme Not Updating
-
-Regenerate Kitty theme:
-
-```bash
-~/.config/hypr/scripts/generate-kitty-theme.py
-```
-
-Open a new Kitty window after regenerating.
-
----
-
-## Screenshare Not Working
-
-Use Vesktop instead of official Discord:
-
-```bash
-flatpak run dev.vencord.Vesktop
-```
-
-Also restart portals:
-
-```bash
-systemctl --user restart xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
-```
-
----
-
-## Repair the Rice
-
-Use:
+Run it with:
 
 ```text
 SUPER + Shift + R
 ```
 
-Or run:
+Or manually:
 
 ```bash
 bash ~/.config/hypr/scripts/repair-rice.sh
 ```
 
----
+The repair process can refresh:
 
-# Known Notes
+- Quickshell
+- Wallpaper daemon
+- SwayNC
+- Adaptive themes
+- Audio defaults
+- Hyprland configuration
 
-## Hyprlock Disabled
-
-Hyprlock was disabled because it caused an unlock/re-lock issue on this system.
-
-Current behavior:
-
-- No automatic lock
-- Idle only turns screens off
-- Caffeine mode can disable idle screen blanking
-
-Hyprlock can be rebuilt later from a minimal safe config.
-
-## Personal Device Names
-
-Some scripts are personalized for:
-
-- Astro A50 headset
-- Fifine microphone
-- DP-2 monitor
-- NVIDIA GPU
-- Aetherelic username/workflow
-
-Edit scripts/configs as needed on another machine.
+<br>
 
 ---
 
-# Disclaimer
+## ✦ Snapshots
 
-This is a personal rice, not a universal Hyprland installer.
+Open the snapshot and restore menu with:
 
-It may require edits for:
+```text
+SUPER + Shift + B
+```
 
-- Monitor names
-- Audio devices
-- Wallpaper paths
-- GPU drivers
-- Quickshell monitor targeting
-- Usernames
-- Installed packages
-- Keyboard layout
-- Boot/login preferences
+Snapshots are stored in:
 
-Use it as a reference, fork, or backup.
+```bash
+~/Aetherelic-Rice-Snapshots
+```
+
+This allows experimental changes to be reverted without rebuilding the entire environment manually.
+
+<br>
 
 ---
 
-# Final Credit
+## ✦ Maintenance
 
-Again, this rice is based on/forked from **Vroomies** by **maxchennn**.
+Open the maintenance menu with:
 
-- Vroomies repo:  
-  https://github.com/maxchennn/vroomies
+```text
+SUPER + Shift + M
+```
 
-- Reddit inspiration:  
-  https://www.reddit.com/r/hyprland/comments/1t8myvg/blame_it_on_your_love_feat_vroomies/
+Available actions include:
 
-This Aetherelic version adds my own adaptive theming, glass menus, gaming tools, repair scripts, snapshots, recording tools, info popups, maintenance workflows, and daily-driver polish.
+- Check for package updates
+- Update the system
+- Clean the Pacman cache
+- List orphan packages
+- Remove orphan packages
+- Clean journal logs
+- Run a rice health check
+
+Review every maintenance action before confirming it.
+
+<br>
+
+---
+
+## ✦ Productivity Tools
+
+### Notes and todo
+
+```text
+SUPER + K
+```
+
+### Focus timer
+
+```text
+SUPER + Shift + K
+```
+
+Personal productivity files are stored in:
+
+```bash
+~/Documents/Aetherelic
+```
+
+### Drop-down terminal
+
+```text
+SUPER + key above Tab
+```
+
+### Floating system monitor
+
+```text
+SUPER + Shift + key above Tab
+```
+
+<br>
+
+---
+
+## ✦ Safe Idle and Caffeine
+
+The current configuration uses display blanking rather than an automatic lock workflow.
+
+```text
+SUPER + Shift + C    Toggle caffeine mode
+SUPER + Ctrl + Z     Turn displays off
+```
+
+> [!WARNING]
+> This configuration may not automatically lock your session.
+
+Anyone using AetherShift on a shared or portable computer should review the idle configuration and add a secure lock screen appropriate for their system.
+
+<br>
+
+---
+
+## ✦ Troubleshooting
+
+### Hyprland reports configuration errors
+
+```bash
+hyprctl configerrors
+```
+
+Inspect the file and line reported by Hyprland.
+
+### Quickshell does not start
+
+```bash
+pkill quickshell 2>/dev/null || true
+
+QML_XHR_ALLOW_FILE_READ=1 \
+  quickshell --path ~/.config/quickshell/shell.qml
+```
+
+### Wallpaper does not apply
+
+```bash
+pkill awww-daemon 2>/dev/null || true
+awww-daemon &
+```
+
+Then apply the current wallpaper:
+
+```bash
+awww img \
+  ~/.config/hypr/current_wallpaper \
+  --transition-type fade \
+  --transition-duration 1.2 \
+  --resize crop
+```
+
+### Rofi colours look incorrect
+
+```bash
+~/.config/hypr/scripts/generate-rofi-glass-theme.py
+```
+
+### Kitty colours do not update
+
+```bash
+~/.config/hypr/scripts/generate-kitty-theme.py
+```
+
+Open a new Kitty window after regenerating the theme.
+
+### Audio uses the wrong device
+
+```bash
+wpctl status
+```
+
+Set the correct device manually:
+
+```bash
+wpctl set-default DEVICE_ID
+```
+
+Then update the included audio helper scripts.
+
+### Screen sharing does not work
+
+Restart the desktop portals:
+
+```bash
+systemctl --user restart \
+  xdg-desktop-portal \
+  xdg-desktop-portal-hyprland \
+  xdg-desktop-portal-gtk
+```
+
+AetherShift uses Vesktop as the recommended Discord client for this workflow:
+
+```bash
+flatpak install flathub dev.vencord.Vesktop
+```
+
+<br>
+
+---
+
+## ✦ Known Personal Settings
+
+Some parts of the repository were written specifically for my hardware and workflow.
+
+These include references to:
+
+- Astro A50 audio output
+- Fifine microphone input
+- NVIDIA graphics
+- `DP-2` monitor targeting
+- The `aetherelic` username
+- Personal document folders
+- Personal wallpaper locations
+
+These values are not intended to work unchanged on every computer.
+
+<br>
+
+---
+
+## ✦ Credits
+
+AetherShift is based on and heavily inspired by
+[Vroomies](https://github.com/maxchennn/vroomies) by
+[maxchennn](https://github.com/maxchennn).
+
+The original project established much of the visual direction, Quickshell foundation and music-player concept that inspired this environment.
+
+Original showcase:
+
+[Blame It on Your Love feat. Vroomies](https://www.reddit.com/r/hyprland/comments/1t8myvg/blame_it_on_your_love_feat_vroomies/)
+
+AetherShift adds my own:
+
+- Adaptive theme scripts
+- Glass action menus
+- Gaming profiles
+- Repair utilities
+- Snapshot system
+- Maintenance tools
+- Recording workflow
+- Information popups
+- Productivity tools
+- Daily-driver customisation
+
+Credit remains with the original authors for their work and inspiration.
+
+<br>
+
+---
+
+## ✦ Disclaimer
+
+AetherShift is provided as a personal dotfiles repository.
+
+It may require substantial editing before it is suitable for another system.
+
+Installing it may overwrite existing configuration files. Always create and verify a backup before copying the repository into `~/.config`.
+
+Use the project as:
+
+- A reference
+- A personal fork
+- A source of individual components
+- A foundation for your own Hyprland environment
+
+Do not treat it as a guaranteed universal installation script.
+
+<br>
+
+---
+
+<div align="center">
+
+<br>
+
+[![AetherShift](https://img.shields.io/badge/AETHERSHIFT-BY_AETHERELIC-7C3AED?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Aetherelic/aethershift-hyprland)
+[![Aetherelic](https://img.shields.io/badge/CREATED_BY-AETHERELIC-111827?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Aetherelic)
+
+</div>
